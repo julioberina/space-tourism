@@ -5,3 +5,49 @@ body {
   margin: 0;
   padding: 0;
 }
+
+.h-1 {
+  font-family: 'Bellefair', serif;
+  font-size: 150px;
+  color: #ffffff;
+}
+
+.h-2 {
+  font-family: 'Bellefair', serif;
+  font-size: 100px;
+  color: #ffffff;
+}
+
+.h-3 {
+  font-family: 'Bellefair', serif;
+  font-size: 56px;
+  color: #ffffff;
+}
+
+.h-4 {
+  font-family: 'Bellefair', serif;
+  font-size: 32px;
+  color: #ffffff;
+}
+
+.h-5 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 28px;
+  color: #d0d6f9;
+  letter-spacing: 4.75px;
+}
+
+.sh-1 {
+  font-family: 'Bellefair', serif;
+  font-size: 28px;
+  color: #ffffff;
+}
+
+.sh-2 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 14px;
+  color: #ffffff;
+  letter-spacing: 2.35px;
+}
+
+.h-1, .h-2, .h-3, .h-4, .h-5, .sh-1, .sh-2 { text-transform: uppercase; }
