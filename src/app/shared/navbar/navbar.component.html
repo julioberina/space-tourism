@@ -1,5 +1,23 @@
 <div class="mobile-container">
-  <h1>Mobile Header</h1>
+  <div class="logo-menu">
+    <div class="logo">
+      <img src="../../../assets/shared/logo.svg" />
+    </div>
+  
+    <div class="menu">
+      <img *ngIf="!isOpened" (click)="open()" src="../../../assets/shared/icon-hamburger.svg" />
+    </div>
+  </div>
+
+  <div id="m-nav" class="nav">
+    <div class="menu">
+      <img *ngIf="isOpened" (click)="close()" src="../../../assets/shared/icon-close.svg" />
+    </div>
+    <a class="nav-item" href="/"><strong>00</strong>Home</a>
+    <a class="nav-item" href="/destination"><strong>01</strong>Destination</a>
+    <a class="nav-item" href="/crew"><strong>02</strong>Crew</a>
+    <a class="nav-item" href="/technology"><strong>03</strong>Technology</a>
+  </div>
 </div>
 
 <div class="tablet-container">
