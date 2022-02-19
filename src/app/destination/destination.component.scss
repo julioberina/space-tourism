@@ -1,0 +1,67 @@
+// for general stylings (both, mobile && desktop)
+@media (min-width: 320px) {
+
+}
+
+// mobile
+@media (max-width: 767px) {
+  .tablet-container, .desktop-container { display: none; }
+}
+
+// tablet
+@media (min-width: 768px) and (max-width: 1024px) {
+  .mobile-container, .desktop-container { display: none; }
+}
+
+// desktop
+@media (min-width: 1025px) {
+  .mobile-container, .tablet-container { display: none; }
+
+  .desktop-container {
+    z-index: 1;
+    background-image: url('../../assets/destination/background-destination-desktop.jpg');
+    background-size: cover;
+    width: 100%;
+    height: calc(100vh + 150px);
+
+    .desktop-content {
+      .nav-page-head {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        margin-top: 4%;
+
+        :nth-child(1) { 
+          margin-left: 160px;
+          margin-right: 20px;
+          color: #444444; 
+          font-weight: bold;
+        }
+
+        :nth-child(2) { color: #ffffff; }
+      }
+
+      .destination-content {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: calc(100vh - 150px);
+
+        .photo {
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-end;
+          align-items: center;
+          width: 50%;
+          height: 100%;
+          padding-right: 100px;
+        }
+
+        .info {
+          width: 50%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}

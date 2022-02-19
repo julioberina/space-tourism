@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppService } from '../app.service';
 
 @Component({
   selector: 'app-destination',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DestinationComponent implements OnInit {
 
-  constructor() { }
+  private data: any;
+  public destinations: any;
+  public photoSrc: any;
+
+  constructor(private appService: AppService) { }
 
   ngOnInit(): void {
+    this.data = this.appService.getData().default;
+    this.destinations = this.data.destinations;
+    this.photoSrc = '../.' + this.destinations[0].images.png;
   }
 
 }
