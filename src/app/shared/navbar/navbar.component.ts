@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -7,11 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
+  @Input() selected: string = '';
   public isOpened = false;
+  public navItems = [
+    { klass: 'nav-item', href: '/' },
+    { klass: 'nav-item', href: '/destination' },
+    { klass: 'nav-item', href: '/crew' },
+    { klass: 'nav-item', href: '/technology' }
+  ]
 
   constructor() { }
 
   ngOnInit(): void {
+    this.navItems.filter(item => item.href === `/${this.selected}`)[0].klass += ' selected';
   }
 
   open() {

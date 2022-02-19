@@ -196,7 +196,10 @@
         strong { padding-right: 10px; }
       }
 
-      .nav-item:hover { border-bottom: 3px solid #ffffff; }
+      .nav-item:hover, .selected { 
+        padding-top: 3px;
+        border-bottom: 3px solid #ffffff; 
+      }
     }
   }
 }
