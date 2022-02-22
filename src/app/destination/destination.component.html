@@ -21,7 +21,29 @@
       </div>
 
       <div class="info">
+        <div class="nav">
+          <ng-container *ngFor="let item of destinations; let i = index">
+            <div id="nav{{i}}" class="nav-item" (click)="select(i)">{{ item.name }}</div>
+          </ng-container>
+        </div>
 
+        <p class="h-2">{{ name }}</p>
+
+        <div class="text">{{ description }}</div>
+
+        <div class="hr"></div>
+
+        <div class="measures">
+          <div class="avg">
+            <p class="desc">Avg. Distance</p>
+            <p class="h-4">{{ distance }}</p>
+          </div>
+
+          <div class="est">
+            <p class="desc">Est. Travel Time</p>
+            <p class="h-4">{{ travel }}</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
