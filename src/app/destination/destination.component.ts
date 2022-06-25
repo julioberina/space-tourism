@@ -33,12 +33,7 @@ export class DestinationComponent implements OnInit {
     this.photoSrc = '../.' + this.destinations[index].images.png;
 
     for (let i = 0; i < 4; ++i) {
-      const div = (document.getElementById(`nav${i}`) as HTMLDivElement);
-
-      console.log(`nav${i} classList: ${div?.classList}`);
-
-      if (i === index)  this.navItemClass[i] = 'nav-item selected';
-      else  this.navItemClass[i] = 'nav-item';
+      this.navItemClass[i] = (i === index) ? 'nav-item selected' : 'nav-item';
     }
 
     this.name = this.destinations[index].name;
