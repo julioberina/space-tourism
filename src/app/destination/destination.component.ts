@@ -16,6 +16,7 @@ export class DestinationComponent implements OnInit {
   public description = '';
   public distance = '';
   public travel = '';
+  public navItemClass = ['nav-item selected', 'nav-item', 'nav-item', 'nav-item'];
 
   constructor(private appService: AppService) { }
 
@@ -34,8 +35,10 @@ export class DestinationComponent implements OnInit {
     for (let i = 0; i < 4; ++i) {
       const div = (document.getElementById(`nav${i}`) as HTMLDivElement);
 
-      if (i === index)  div?.classList.add('selected');
-      else  div?.classList.remove('selected');
+      console.log(`nav${i} classList: ${div?.classList}`);
+
+      if (i === index)  this.navItemClass[i] = 'nav-item selected';
+      else  this.navItemClass[i] = 'nav-item';
     }
 
     this.name = this.destinations[index].name;

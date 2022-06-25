@@ -62,7 +62,7 @@
       <div class="info">
         <div class="nav">
           <ng-container *ngFor="let item of destinations; let i = index">
-            <div id="nav{{i}}" class="nav-item" (click)="select(i)">{{ item.name }}</div>
+            <div id="nav{{i}}" [ngClass]="navItemClass[i]" (click)="select(i)">{{ item.name }}</div>
           </ng-container>
         </div>
 
