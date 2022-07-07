@@ -1,1 +1,50 @@
-<p>crew works!</p>
+<div class="mobile-container">
+  <app-navbar [selected]="'crew'"></app-navbar>
+
+  <div class="mobile-content">
+    <div class="nav-page-head">
+      <p class="h-5">02</p>
+      <p class="h-5">Pick Your Destination</p>
+    </div>
+
+    <div class="crew-content">
+    </div>
+  </div>
+</div>
+
+<div class="tablet-container">
+  <app-navbar [selected]="'crew'"></app-navbar>
+
+  <div class="tablet-content">
+    <div class="nav-page-head">
+      <p class="h-5">02</p>
+      <p class="h-5">Pick Your Destination</p>
+    </div>
+
+    <div class="crew-content">
+    </div>
+  </div>
+</div>
+
+<div class="desktop-container">
+  <app-navbar [selected]="'crew'"></app-navbar>
+
+  <div class="desktop-content">
+    <div class="nav-page-head">
+      <p class="h-5">02</p>
+      <p class="h-5">Meet Your Crew</p>
+    </div>
+
+    <div class="crew-content">
+      <div class="crew-info">
+        <p class="h-4">{{ role }}</p>
+        <p class="h-3">{{ name }}</p>
+        <p class="text">{{ bio }}</p>
+      </div>
+
+      <div class="crew-image">
+        <span><img [src]="photoSrc" /></span>
+      </div>
+    </div>
+  </div>
+</div>

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { CrewRoutingModule } from './crew-routing.module';
 import { CrewComponent } from './crew.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { CrewComponent } from './crew.component';
   ],
   imports: [
     CommonModule,
-    CrewRoutingModule
+    CrewRoutingModule,
+    SharedModule
   ]
 })
 export class CrewModule { }
