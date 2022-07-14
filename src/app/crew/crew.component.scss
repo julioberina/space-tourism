@@ -156,6 +156,32 @@
           margin-top: -80px;
         }
       }
+
+      .crew-radio {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        margin-top: -6%;
+        padding-left: calc(10% + 7px);
+        
+        span {
+          border-radius: 10px;
+          width: 15px;
+          height: 15px;
+        }
+
+        .default {
+          background-color: rgba(255, 255, 255, 0.2);
+          backdrop-filter: blur(50px);
+        }
+
+        .selected {
+          background-color: rgba(255, 255, 255, 1);
+          backdrop-filter: blur(50px);
+        }
+
+        :not(#crew0) { margin-left: 25px; }
+      }
     }
   }
 }

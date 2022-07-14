@@ -15,6 +15,7 @@ export class CrewComponent implements OnInit {
   public name = '';
   public role = '';
   public bio = '';
+  public radio = ['default', 'default', 'default', 'default'];
 
   constructor(private appService: AppService) { }
 
@@ -32,5 +33,9 @@ export class CrewComponent implements OnInit {
     this.name = this.crew[index].name;
     this.role = this.crew[index].role;
     this.bio = this.crew[index].bio;
+
+    for (let i = 0; i < this.crew.length; ++i) {
+      this.radio[i] = i === index ? 'selected' : 'default';
+    }
   }
 }
